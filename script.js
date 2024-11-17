@@ -1,25 +1,5 @@
 import { usuarios } from "./database.js";
 
-//---------------funcion de anadir al carrito
-
-function añadirAlCarrito(idMensaje) {
-    // Obtener el elemento del mensaje de confirmación usando el ID específico para cada producto.
-    const mensajeConfirmacion = document.getElementById(idMensaje);
-    
-    // Mostrar el mensaje de confirmación, quitando la clase "hidden" que lo oculta.
-    mensajeConfirmacion.classList.remove("hidden");
-    
-    // Ocultar el mensaje después de 2 segundos.
-    esperaUnMomento(() => {
-        mensajeConfirmacion.classList.add("hidden");
-    }, 2000); // Espera de 2 segundos (2000 milisegundos)
-}
-
-// Función de espera personalizada que utiliza "setTimeout" para ejecutar una acción después de un tiempo.
-function esperaUnMomento(callback, tiempo) {  //callback: una función a ejecutar después de cierto tiempo.
-    setTimeout(callback, tiempo);
-}
-//--------------------------------------------------
 //Constantes botones
 const btnLogin = document.getElementById("btnLogin");
 const btnRegistro = document.getElementById("btnRegistro");
@@ -64,6 +44,8 @@ function mostrarMain() {
     bienestarYBelleza.classList.add('hidden')
     hogar.classList.add('hidden')
     mascotas.classList.add('hidden')
+    document.getElementById('categoria').selectedIndex = 0;
+    document.getElementById('categoria').style = "color: ##94a3b8;"
 }
 
 //Evento del btn logo EcoSfera seccion formulario
@@ -75,6 +57,7 @@ function mostrarCatalogoCategoria() {
     let categoria = document.getElementById('categoria').value
     switch (categoria) {
         case 'aseoPersonal':
+            document.getElementById('categoria').style = "color: black;"
             aseoPersonal.classList.remove('hidden')
             mainIndex.classList.add('hidden')
             sectionBlog.classList.add('hidden')
@@ -84,6 +67,7 @@ function mostrarCatalogoCategoria() {
             mascotas.classList.add('hidden')
             break;
         case 'hogar':
+            document.getElementById('categoria').style = "color: black;"
             aseoPersonal.classList.add('hidden')
             mainIndex.classList.add('hidden')
             sectionBlog.classList.add('hidden')
@@ -93,6 +77,7 @@ function mostrarCatalogoCategoria() {
             mascotas.classList.add('hidden')
         break;
         case 'bienestarYBelleza':
+            document.getElementById('categoria').style = "color: black;"
             aseoPersonal.classList.add('hidden')
             mainIndex.classList.add('hidden')
             sectionBlog.classList.add('hidden')
@@ -102,6 +87,7 @@ function mostrarCatalogoCategoria() {
             mascotas.classList.add('hidden')
         break;
         case 'mascotas':
+            document.getElementById('categoria').style = "color: black;"
             aseoPersonal.classList.add('hidden')
             mainIndex.classList.add('hidden')
             sectionBlog.classList.add('hidden')
@@ -125,6 +111,8 @@ function mostrarBlog() {
     hogar.classList.add('hidden');
     mascotas.classList.add('hidden');
     bienestarYBelleza.classList.add('hidden');
+    document.getElementById('categoria').selectedIndex = 0;
+    document.getElementById('categoria').style = "color: ##94a3b8;"
 
 }
 
@@ -185,6 +173,7 @@ function iniciarSesion() {
                 }
             });
             mostrarMain()
+            formLogin.reset();
         }else{
             Swal.fire({
                 title: "Error",
@@ -225,10 +214,19 @@ function registrarUsuario() {
             });
             formRegister.classList.add('hidden')
             formLogin.classList.remove('hidden')
+            formRegister.reset();
         }
     })
     
 }
+
+//---------------funcion de anadir al carrito
+
+
+
+
+
+
 
 
 // /*Carol rivera*/

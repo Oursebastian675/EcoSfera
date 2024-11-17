@@ -21,8 +21,8 @@
               <input type="search" id="searchInput" placeholder="Search" class="border-2 rounded-md mr-3 pl-3">
               <button id="ingresar" type="button" class="hover:scale-110"><i class="fa-solid fa-magnifying-glass mr-3"></i></button>
             </div>
-            <select class="border-0 bg-gradient-to-t from-cyan-200 to-transparent" name="categorias" id="categoria">
-              <option value="vacio"></option>
+            <select class="border-0 bg-gradient-to-t from-cyan-200 to-transparent text-slate-400" name="categorias" id="categoria" >
+              <option value="">Categorias</option>
               <option value="aseoPersonal">Aseo personal</option>
               <option value="hogar">Hogar</option>
               <option value="bienestarYBelleza">Bienestar y belleza</option>
@@ -76,6 +76,7 @@
          </div>
     
         </div>
+        <!--Seccion productos mas vendidos-->
       <div class="w-11/12 grid gap-20 gap-x-20 grid-cols-4 grid-rows-2 my-20 p-20 m-auto">
         <div class=" w-60 h-60 flex flex-col items-center justify-center ">
           <img class="w-40 h-38 border-4 border-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:" src="./accents/SnacksOrgánicos.jpeg" alt="Snaks organicos">
@@ -84,18 +85,18 @@
             <p class="font-medium">Snaks organicos</p>
           </div>
           <p class="font-medium">$6.950</p>
-          <button onclick="añadirAlCarrito('mensajeConfirmacion24')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
-          <p id="mensajeConfirmacion24" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
+          <button onclick="añadirAlCarrito('mensajeConfirmacionMain32')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
+          <p id="mensajeConfirmacionMain32" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
         </div>
         <div class=" w-60 h-60 flex flex-col items-center justify-center ">
           <img class="w-40 h-38 border-4 border-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:" src="./accents/champuDeCafe.jpeg" alt="champu de café natural">
           <div class="flex items-center">
             <i class="fa-solid fa-tags pr-2"></i>
-            <p class="font-medium">champu de café</p>
+            <p class="font-medium">Shampu de café</p>
           </div>
           <p class="font-medium">$19.999</p>
-          <button onclick="añadirAlCarrito('mensajeConfirmacion5')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
-          <p id="mensajeConfirmacion5" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
+          <button onclick="añadirAlCarrito('mensajeConfirmacionMain5')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
+          <p id="mensajeConfirmacionMain5" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
           
         </div>
         <div class=" w-60 h-60 flex flex-col items-center justify-center ">
@@ -105,18 +106,18 @@
             <p class="font-medium">Cesto de fibra </p>
           </div> 
           <p class="font-medium">$15.000</p>
-          <button onclick="añadirAlCarrito('mensajeConfirmacion11')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
-          <p id="mensajeConfirmacion11" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
+          <button onclick="añadirAlCarrito('mensajeConfirmacionMain11')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
+          <p id="mensajeConfirmacionMain11" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
         </div>
         <div class=" w-60 h-60 flex flex-col items-center justify-center">
           <img class="w-40 h-38 border-4 border-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:" src="./accents/Bloquiador.jpeg" alt="Bloquiador">
           <div class="flex items-center">
             <i class="fa-solid fa-tags pr-2"></i>
-            <p class="font-medium">Bloquiador  </p>
+            <p class="font-medium">Bloqueador  </p>
           </div>
           <p class="font-medium">$21.000</p>
-          <button onclick="añadirAlCarrito('mensajeConfirmacion19')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
-          <p id="mensajeConfirmacion19" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
+          <button onclick="añadirAlCarrito('mensajeConfirmacionMain19')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
+          <p id="mensajeConfirmacionMain19" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
         </div>
         <div class=" w-60 h-60 flex flex-col items-center justify-center mt-8">
           <img class="w-40 h-38 border-4 border-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:" src="./accents/hiloDentalDeSeda.jpeg" alt="Hilo dental de seda">
@@ -125,8 +126,8 @@
             <p class="font-medium">Hilo dental de seda</p>
           </div>
           <p class="font-medium">$5.950</p>
-          <button onclick="añadirAlCarrito('mensajeConfirmacion8')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
-          <p id="mensajeConfirmacion8" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
+          <button onclick="añadirAlCarrito('mensajeConfirmacionMain8')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
+          <p id="mensajeConfirmacionMain8" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
         </div>
         <div class=" w-60 h-60 flex flex-col items-center justify-center mt-8">
           <img class="w-40 h-38 border-4 border-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:" src="./accents/EsmalteEcologico.jpeg" alt="Esmalte">
@@ -135,19 +136,19 @@
             <p class="font-medium">Esmalte</p>
           </div>
           <p class="font-medium">$5.950</p>
-          <button onclick="añadirAlCarrito('mensajeConfirmacion21')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
-          <p id="mensajeConfirmacion21" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
+          <button onclick="añadirAlCarrito('mensajeConfirmacionMain21')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
+          <p id="mensajeConfirmacionMain21" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
           
         </div>
         <div class=" w-60 h-60 flex flex-col items-center justify-center mt-8">
           <img class="w-40 h-38 border-4 border-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:" src="./accents/Champú.jpeg" alt="Champú">
           <div class="flex items-center">
             <i class="fa-solid fa-tags pr-2"></i>
-            <p class="font-medium">Champú </p>
+            <p class="font-medium">Shampú </p>
           </div>
           <p class="font-medium">$12.900</p>
-          <button onclick="añadirAlCarrito('mensajeConfirmacion19')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
-          <p id="mensajeConfirmacion19" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
+          <button onclick="añadirAlCarrito('mensajeConfirmacionMain27')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
+          <p id="mensajeConfirmacionMain27" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
         </div>
         <div class=" w-60 h-60 flex flex-col items-center justify-center mt-8">
           <img class="w-40 h-38 border-4 border-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:" src="./accents/CortinasDeAlgodon.jpeg" alt="Cortina de algodón">
@@ -156,8 +157,8 @@
             <p class="font-medium">Cortinas de algodón</p>
           </div>
           <p class="font-medium">$17.950</p>
-          <button onclick="añadirAlCarrito('mensajeConfirmacion10')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
-          <p id="mensajeConfirmacion10" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
+          <button onclick="añadirAlCarrito('mensajeConfirmacionMain10')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
+          <p id="mensajeConfirmacionMain10" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
         </div>
         <!--Seccion de productos Sebastian Castaño-->
         <!--Agregar una seccion de 8 productos, con sus respectivas imagenes, nombres y precios-->
@@ -177,8 +178,8 @@
       </div>
     </main>
     <!--Seccion del blog-->
-    <section id="section-blog" class="w-11/12 mx-auto my-20 grid grid-cols-3 grid-rows-5 gap-x-20 gap-y-20 p-20">
-      <article class="w-72 flex flex-col items-center text-wrap border-2 bg-gradient-to-r from-slate-200 via-transparent to-transparent hover:bg-slate-200 shadow-xl style="height: 600px; ">
+    <section id="section-blog" class="w-11/12 mx-auto my-20 grid grid-cols-3 gap-x-20 gap-y-20 p-20">
+      <article class="w-72 flex flex-col items-center text-wrap border-2 bg-gradient-to-r from-slate-200 via-transparent to-transparent hover:bg-slate-200 shadow-xl">
           <img class="w-full h-48" src="./accents/ecologia.blog.jpg" alt="">
           <div class="flex font-thin m-5 items-center">
             <img src="./accents/logoEcoSfera.png" alt="icono de la tierra con una planta" class="h-8">
@@ -190,7 +191,7 @@
                 numquam nam autem praesentium sit magnam veniam quia architecto!</p></a>
           </div>
       </article>
-      <article class="w-72 flex flex-col items-center text-wrap border-2 bg-gradient-to-r from-slate-200 via-transparent to-transparent hover:bg-slate-200 shadow-xl style="height: 600px; ">
+      <article class="w-72 flex flex-col items-center text-wrap border-2 bg-gradient-to-r from-slate-200 via-transparent to-transparent hover:bg-slate-200 shadow-xl">
           <img class="w-full h-48" src="./accents/ecologia.blog.jpg" alt="">
           <div class="flex font-thin m-5 items-center">
             <img src="./accents/logoEcoSfera.png" alt="icono de la tierra con una planta" class="h-8">
@@ -202,7 +203,7 @@
                 numquam nam autem praesentium sit magnam veniam quia architecto!</p></a>
           </div>
       </article>
-      <article class="w-72 flex flex-col items-center text-wrap border-2 bg-gradient-to-r from-slate-200 via-transparent to-transparent hover:bg-slate-200 shadow-xl style="height: 600px; ">
+      <article class="w-72 flex flex-col items-center text-wrap border-2 bg-gradient-to-r from-slate-200 via-transparent to-transparent hover:bg-slate-200 shadow-xl">
           <img class="w-full h-48" src="./accents/ecologia.blog.jpg" alt="">
           <div class="flex font-thin m-5 items-center">
             <img src="./accents/logoEcoSfera.png" alt="icono de la tierra con una planta" class="h-8">
@@ -214,7 +215,7 @@
                 numquam nam autem praesentium sit magnam veniam quia architecto!</p></a>
           </div>
       </article>
-      <article class="w-72 flex flex-col items-center text-wrap border-2 bg-gradient-to-r from-slate-200 via-transparent to-transparent hover:bg-slate-200 shadow-xl style="height: 600px; ">
+      <article class="w-72 flex flex-col items-center text-wrap border-2 bg-gradient-to-r from-slate-200 via-transparent to-transparent hover:bg-slate-200 shadow-xl">
           <img class="w-full h-48" src="./accents/ecologia.blog.jpg" alt="">
           <div class="flex font-thin m-5 items-center">
             <img src="./accents/logoEcoSfera.png" alt="icono de la tierra con una planta" class="h-8">
@@ -226,55 +227,7 @@
                 numquam nam autem praesentium sit magnam veniam quia architecto!</p></a>
           </div>
       </article>
-      <article class="w-72 flex flex-col items-center text-wrap border-2 bg-gradient-to-r from-slate-200 via-transparent to-transparent hover:bg-slate-200 shadow-xl style="height: 600px; ">
-          <img class="w-full h-48" src="./accents/ecologia.blog.jpg" alt="">
-          <div class="flex font-thin m-5 items-center">
-            <img src="./accents/logoEcoSfera.png" alt="icono de la tierra con una planta" class="h-8">
-            <p class="mx-2">EcoSfera</p>
-          </div>  
-          <div class="px-4 flex flex-col">
-            <a href="#"><p class="font-semibold uppercase">lorem ipsum dorma compresious</p>
-              <p class="my-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti mollitia eaque molestias, sapiente nostrum, nulla debitis quod natus provident quas molestiae, 
-                numquam nam autem praesentium sit magnam veniam quia architecto!</p></a>
-          </div>
-      </article>
-      <article class="w-72 flex flex-col items-center text-wrap border-2 bg-gradient-to-r from-slate-200 via-transparent to-transparent hover:bg-slate-200 shadow-xl style="height: 600px; ">
-          <img class="w-full h-48" src="./accents/ecologia.blog.jpg" alt="">
-          <div class="flex font-thin m-5 items-center">
-            <img src="./accents/logoEcoSfera.png" alt="icono de la tierra con una planta" class="h-8">
-            <p class="mx-2">EcoSfera</p>
-          </div>  
-          <div class="px-4 flex flex-col">
-            <a href="#"><p class="font-semibold uppercase">lorem ipsum dorma compresious</p>
-              <p class="my-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti mollitia eaque molestias, sapiente nostrum, nulla debitis quod natus provident quas molestiae, 
-                numquam nam autem praesentium sit magnam veniam quia architecto!</p></a>
-          </div>
-      </article>
-      <article class="w-72 flex flex-col items-center text-wrap border-2 bg-gradient-to-r from-slate-200 via-transparent to-transparent hover:bg-slate-200 shadow-xl style="height: 600px; ">
-          <img class="w-full h-48" src="./accents/ecologia.blog.jpg" alt="">
-          <div class="flex font-thin m-5 items-center">
-            <img src="./accents/logoEcoSfera.png" alt="icono de la tierra con una planta" class="h-8">
-            <p class="mx-2">EcoSfera</p>
-          </div>  
-          <div class="px-4 flex flex-col">
-            <a href="#"><p class="font-semibold uppercase">lorem ipsum dorma compresious</p>
-              <p class="my-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti mollitia eaque molestias, sapiente nostrum, nulla debitis quod natus provident quas molestiae, 
-                numquam nam autem praesentium sit magnam veniam quia architecto!</p></a>
-          </div>
-      </article>
-      <article class="w-72 flex flex-col items-center text-wrap border-2 bg-gradient-to-r from-slate-200 via-transparent to-transparent hover:bg-slate-200 shadow-xl style="height: 600px; ">
-          <img class="w-full h-48" src="./accents/ecologia.blog.jpg" alt="">
-          <div class="flex font-thin m-5 items-center">
-            <img src="./accents/logoEcoSfera.png" alt="icono de la tierra con una planta" class="h-8">
-            <p class="mx-2">EcoSfera</p>
-          </div>  
-          <div class="px-4 flex flex-col">
-            <a href="#"><p class="font-semibold uppercase">lorem ipsum dorma compresious</p>
-              <p class="my-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti mollitia eaque molestias, sapiente nostrum, nulla debitis quod natus provident quas molestiae, 
-                numquam nam autem praesentium sit magnam veniam quia architecto!</p></a>
-          </div>
-      </article>
-      <article class="w-72 flex flex-col items-center text-wrap border-2 bg-gradient-to-r from-slate-200 via-transparent to-transparent hover:bg-slate-200 shadow-xl style="height: 600px; ">
+      <article class="w-72 flex flex-col items-center text-wrap border-2 bg-gradient-to-r from-slate-200 via-transparent to-transparent hover:bg-slate-200 shadow-xl">
           <img class="w-full h-48" src="./accents/ecologia.blog.jpg" alt="">
           <div class="flex font-thin m-5 items-center">
             <img src="./accents/logoEcoSfera.png" alt="icono de la tierra con una planta" class="h-8">
@@ -384,7 +337,7 @@
       <img class="w-40 h-38 border-4 border-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:" src="./accents/champuDeCafe.jpeg" alt="champu de café natural">
       <div class="flex items-center">
         <i class="fa-solid fa-tags pr-2"></i>
-        <p class="font-medium">champu de café</p>
+        <p class="font-medium">Shampu de café</p>
       </div>
       <p class="font-medium">$19.999</p>
       <button onclick="añadirAlCarrito('mensajeConfirmacion5')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
@@ -411,16 +364,16 @@
       <button onclick="añadirAlCarrito('mensajeConfirmacion7')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
       <p id="mensajeConfirmacion7" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
     </div>
-    <div class=" w-60 h-60 flex flex-col items-center justify-center mt-8">
-      <img class="w-40 h-38 border-4 border-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:" src="./accents/hiloDentalDeSeda.jpeg" alt="Hilo dental de seda">
-      <div class="flex items-center">
-        <i class="fa-solid fa-tags pr-2"></i>
-        <p class="font-medium">Hilo dental de seda</p>
-      </div>
-      <p class="font-medium">$5.950</p>
-      <button onclick="añadirAlCarrito('mensajeConfirmacion8')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
-      <p id="mensajeConfirmacion8" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
-    </div>
+     <div class=" w-60 h-60 flex flex-col items-center justify-center mt-8">
+          <img class="w-40 h-38 border-4 border-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:" src="./accents/hiloDentalDeSeda.jpeg" alt="Hilo dental de seda">
+          <div class="flex items-center">
+            <i class="fa-solid fa-tags pr-2"></i>
+            <p class="font-medium">Hilo dental de seda</p>
+          </div>
+          <p class="font-medium">$5.950</p>
+          <button onclick="añadirAlCarrito('mensajeConfirmacion8')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
+          <p id="mensajeConfirmacion8" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
+        </div>
   </div>
   <!--Seccion Bienestar y belleza-->
   <div id="bienestarYBelleza" class="w-11/12 grid gap-20 gap-x-20 grid-cols-4 grid-rows-2 my-20 p-20 m-auto ">
@@ -448,7 +401,7 @@
       <img class="w-40 h-38 border-4 border-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:" src="./accents/Bloquiador.jpeg" alt="Bloquiador">
       <div class="flex items-center">
         <i class="fa-solid fa-tags pr-2"></i>
-        <p class="font-medium">Bloquiador  </p>
+        <p class="font-medium">Bloqueador  </p>
       </div>
       <p class="font-medium">$21.000</p>
       <button onclick="añadirAlCarrito('mensajeConfirmacion19')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
@@ -557,7 +510,6 @@
       <p class="font-medium">$79.950</p>
       <button onclick="añadirAlCarrito('mensajeConfirmacion13')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
       <p id="mensajeConfirmacion13" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
-      
     </div>
     <div class=" w-60 h-60 flex flex-col items-center justify-center mt-8">
       <img class="w-40 h-38 border-4 border-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:" src="./accents/toallasMicrofibraReutilizables.jpeg" alt="Toallas de microfibra reutilizables">
@@ -599,8 +551,8 @@
         <p class="font-medium">Arena de bambú</p>
       </div>
       <p class="font-medium">$25.000</p>
-      <button onclick="añadirAlCarrito('mensajeConfirmacion17')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
-      <p id="mensajeConfirmacion17" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
+      <button onclick="añadirAlCarrito('mensajeConfirmacion25')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
+      <p id="mensajeConfirmacion25" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
     </div>
     <div class=" w-60 h-60 flex flex-col items-center justify-center">
       <img class="w-40 h-38 border-4 border-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:" src="./accents/CamaOrganica.jpeg" alt="Cama">
@@ -609,18 +561,18 @@
         <p class="font-medium">Cama  </p>
       </div>
       <p class="font-medium">18.000</p>
-      <button onclick="añadirAlCarrito('mensajeConfirmacion18')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
-      <p id="mensajeConfirmacion18" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
+      <button onclick="añadirAlCarrito('mensajeConfirmacion26')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
+      <p id="mensajeConfirmacion26" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
     </div>
     <div class=" w-60 h-60 flex flex-col items-center justify-center">
       <img class="w-40 h-38 border-4 border-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:" src="./accents/Champú.jpeg" alt="Champú">
       <div class="flex items-center">
         <i class="fa-solid fa-tags pr-2"></i>
-        <p class="font-medium">Champú </p>
+        <p class="font-medium">Shampú </p>
       </div>
       <p class="font-medium">$12.900</p>
-      <button onclick="añadirAlCarrito('mensajeConfirmacion19')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
-      <p id="mensajeConfirmacion19" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
+      <button onclick="añadirAlCarrito('mensajeConfirmacion27')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
+      <p id="mensajeConfirmacion27" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
     </div>
     <div class=" w-60 h-60 flex flex-col items-center justify-center">
       <img class="w-40 h-38 border-4 border-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:" src="./accents/CollarDeAlgodón (2).jpeg" alt="Collar de algodón">
@@ -629,8 +581,8 @@
         <p class="font-medium">Collar de algodón</p>
       </div>
       <p class="font-medium">12.000</p>
-      <button onclick="añadirAlCarrito('mensajeConfirmacion20')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
-      <p id="mensajeConfirmacion20" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
+      <button onclick="añadirAlCarrito('mensajeConfirmacion28')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
+      <p id="mensajeConfirmacion28" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
     </div>
     <div class=" w-60 h-60 flex flex-col items-center justify-center mt-8">
       <img class="w-40 h-38 border-4 border-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:" src="./accents/JugueteCuerdaNatural.jpeg" alt="Juguete Cuerda Natural">
@@ -639,8 +591,8 @@
         <p class="font-medium">Juguete cuerda natural</p>
       </div>
       <p class="font-medium">$6.000</p>
-      <button onclick="añadirAlCarrito('mensajeConfirmacion21')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
-      <p id="mensajeConfirmacion21" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
+      <button onclick="añadirAlCarrito('mensajeConfirmacion29')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
+      <p id="mensajeConfirmacion29" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
       
     </div>
     <div class=" w-60 h-60 flex flex-col items-center justify-center mt-8">
@@ -650,8 +602,8 @@
         <p class="font-medium">Pañitos biodegradables</p>
       </div>
       <p class="font-medium">$9.950</p>
-      <button onclick="añadirAlCarrito('mensajeConfirmacion22')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
-      <p id="mensajeConfirmacion22" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
+      <button onclick="añadirAlCarrito('mensajeConfirmacion30')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
+      <p id="mensajeConfirmacion30" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
     </div>
     <div class=" w-60 h-60 flex flex-col items-center justify-center mt-8">
       <img class="w-40 h-38 border-4 border-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:" src="./accents/PastaDientesNatural.jpeg" alt="Pasta de Dientes Natural">
@@ -660,8 +612,8 @@
         <p class="font-medium">Pasta de dintes </p>
       </div>
       <p class="font-medium">$7.000</p>
-      <button onclick="añadirAlCarrito('mensajeConfirmacion23')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
-      <p id="mensajeConfirmacion23" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
+      <button onclick="añadirAlCarrito('mensajeConfirmacion31')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
+      <p id="mensajeConfirmacion31" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
     </div>
     <div class=" w-60 h-60 flex flex-col items-center justify-center mt-8">
       <img class="w-40 h-38 border-4 border-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:" src="./accents/SnacksOrgánicos.jpeg" alt="Snaks organicos">
@@ -670,8 +622,8 @@
         <p class="font-medium">Snaks organicos</p>
       </div>
       <p class="font-medium">$6.950</p>
-      <button onclick="añadirAlCarrito('mensajeConfirmacion24')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
-      <p id="mensajeConfirmacion24" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
+      <button onclick="añadirAlCarrito('mensajeConfirmacion32')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
+      <p id="mensajeConfirmacion32" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
     </div>
   </div>
     <footer id="footer-principal" class="w-11/12 m-auto">
@@ -700,5 +652,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script type="module" src="script.js"></script>
+    <script src="./carrito.js"></script>
   </body>
 </html>

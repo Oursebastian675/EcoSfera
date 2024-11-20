@@ -1,0 +1,100 @@
+/* Estilo general */
+body {
+    background-color: #f7fafc; /* Color similar a bg-gray-100 */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+
+/* Tarjeta del blog */
+.blog-card {
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Imagen */
+.blog-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Contenido */
+.content {
+    padding: 1.5rem;
+}
+
+/* Título principal */
+.title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000000;
+    margin: 0;
+    transition: color 0.3s;
+}
+
+.title:hover {
+    color: #2563eb; /* Color azul para hover */
+}
+
+/* Subtítulos */
+.subtitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #000000;
+    margin-top: 1rem;
+}
+
+/* Puntos destacados */
+.point {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #000000;
+    margin-top: 1rem;
+}
+
+
+
+/* Lista de consejos */
+.tips {
+    margin-top: 1rem;
+    padding-left: 1.5rem;
+}
+
+.tips li {
+    margin-top: 0.5rem;
+}
+
+
+/*----------------------------------*/
+/* Estilo general para la lista */
+.tips-list {
+    list-style-type: decimal; /* Enumerada automáticamente */
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+}
+
+/* Subtítulos en línea */
+.point {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #000000;
+    display: inline; /* Mantener en la misma línea */
+}
+
+/* Texto en línea */
+.text-inline {
+    font-size: 1rem;
+    color: #080808;
+    margin-left: 0.5rem; /* Espacio entre el subtítulo y el texto */
+    display: inline;
+}

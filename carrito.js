@@ -1,5 +1,5 @@
-const carrito = []
-function añadirAlCarrito(idMensaje) {
+const Car = []
+function añadirAlCar(idMensaje) {
     // Obtener el elemento del mensaje de confirmación usando el ID específico para cada producto.
     const mensajeConfirmacion = document.getElementById(idMensaje);
     
@@ -13,7 +13,7 @@ function añadirAlCarrito(idMensaje) {
     let producto = {
         nombreProducto: idMensaje
     }
-    carrito.push(producto)
+    Car.push(producto)
 }
 
 // Función de espera personalizada que utiliza "setTimeout" para ejecutar una acción después de un tiempo.

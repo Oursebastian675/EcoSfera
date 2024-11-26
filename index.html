@@ -30,7 +30,32 @@
             </select>
             <button type="button" id="btn-blog" class="pl-4 hover:text-white hover:scale-110">Blog</button>
             <button type="button" id="btn-ingresar" class="pl-4 hover:text-white hover:scale-110">Ingresar</button>
-            <a href="#" class="pr-4 pl-4 hover:text-white hover:scale-110"><i class="fa-solid fa-cart-shopping"></i></a>
+            
+            <link rel="stylesheet" href="styleCar.css">
+        <ul>
+          <li class="submenu">
+            <img src="img/cart.png" id="img-carrito" class="img-carrito">
+            <div id="carrito">
+  
+              <table id="lista-carrito">
+                <thead>
+                  <tr>
+                    <th>Imagen</th>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+  
+              <a href="#" id="vaciar-carrito" class="button Vaciar">Vaciar Carrito</a>
+            </div>
+          </li>
+        </ul>
+
+
           </nav>
     </header>
     <!--Main de la pagina-->
@@ -87,93 +112,123 @@
          </div>
     
         </div>
+
+
+        
+  
+
+
+
+
         <!--Seccion productos mas vendidos-->
-      <div class="w-11/12 grid gap-20 gap-x-20 grid-cols-4 grid-rows-2 my-20 p-20 m-auto">
+      <div id="lista-productos" class="w-11/12 grid gap-20 gap-x-20 grid-cols-4 grid-rows-2 my-20 p-20 m-auto">
+
+        <div class="info-card">
         <div class=" w-60 h-60 flex flex-col items-center justify-center ">
-          <img class="w-40 h-38 border-4 border-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:" src="./accents/SnacksOrgánicos.jpeg" alt="Snaks organicos">
+          <img class="w-40 h-38 border-4 border-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:" src="./accents/SnacksOrgánicos.jpeg" alt="Snacks organicos">
           <div class="flex items-center">
             <i class="fa-solid fa-tags pr-2"></i>
-            <p class="font-medium">Snaks organicos</p>
+            <p class="font-medium">Snacks organicos</p>
           </div>
-          <p class="font-medium">$6.950</p>
-          <button onclick="añadirAlCarrito('mensajeConfirmacionMain32')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
+          <p class="font-medium"><span>$6.950</span></p>
+          <button data-id="1" onclick="añadirAlCar('mensajeConfirmacionMain32')" class="agregar-carrito  mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
           <p id="mensajeConfirmacionMain32" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
         </div>
+        </div>
+
+        <div class="info-card">
         <div class=" w-60 h-60 flex flex-col items-center justify-center ">
-          <img class="w-40 h-38 border-4 border-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:" src="./accents/champuDeCafe.jpeg" alt="champu de café natural">
+          <img class="w-40 h-38 border-4 border-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:" src="./accents/champuDeCafe.jpeg" alt="Shampoo de café natural">
           <div class="flex items-center">
             <i class="fa-solid fa-tags pr-2"></i>
-            <p class="font-medium">Shampu de café</p>
+            <p class="font-medium">Shampoo de café</p>
           </div>
-          <p class="font-medium">$19.999</p>
-          <button onclick="añadirAlCarrito('mensajeConfirmacionMain5')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
+          <p class="font-medium"><span>$19.999</span></p>
+          <button data-id="2" onclick="añadirAlCar('mensajeConfirmacionMain5')" class="agregar-carrito mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
           <p id="mensajeConfirmacionMain5" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
-          
         </div>
+        </div>
+
+        <div class="info-card">
         <div class=" w-60 h-60 flex flex-col items-center justify-center ">
           <img class="w-40 h-38 border-4 border-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:" src="./accents/CestoFibrasNaturales.jpeg" alt="Cesto de fibra natural">
           <div class="flex items-center">
             <i class="fa-solid fa-tags pr-2"></i>
             <p class="font-medium">Cesto de fibra </p>
           </div> 
-          <p class="font-medium">$15.000</p>
-          <button onclick="añadirAlCarrito('mensajeConfirmacionMain11')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
+          <p class="font-medium"><span>$15.000</span></p>
+          <button data-id="3" onclick="añadirAlCar('mensajeConfirmacionMain11')" class="agregar-carrito mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
           <p id="mensajeConfirmacionMain11" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
         </div>
+        </div>
+
+        <div class="info-card">
         <div class=" w-60 h-60 flex flex-col items-center justify-center">
-          <img class="w-40 h-38 border-4 border-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:" src="./accents/Bloquiador.jpeg" alt="Bloquiador">
+          <img class="w-40 h-38 border-4 border-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:" src="./accents/Bloquiador.jpeg" alt="Bloqueador">
           <div class="flex items-center">
             <i class="fa-solid fa-tags pr-2"></i>
             <p class="font-medium">Bloqueador  </p>
           </div>
-          <p class="font-medium">$21.000</p>
-          <button onclick="añadirAlCarrito('mensajeConfirmacionMain19')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
+          <p class="font-medium"><span>$21.000</span></p>
+          <button data-id="4" onclick="añadirAlCar('mensajeConfirmacionMain19')" class="agregar-carrito mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
           <p id="mensajeConfirmacionMain19" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
         </div>
+        </div>
+
+        <div class="info-card">
         <div class=" w-60 h-60 flex flex-col items-center justify-center mt-8">
           <img class="w-40 h-38 border-4 border-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:" src="./accents/hiloDentalDeSeda.jpeg" alt="Hilo dental de seda">
           <div class="flex items-center">
             <i class="fa-solid fa-tags pr-2"></i>
             <p class="font-medium">Hilo dental de seda</p>
           </div>
-          <p class="font-medium">$5.950</p>
-          <button onclick="añadirAlCarrito('mensajeConfirmacionMain8')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
+          <p class="font-medium"><span>$5.950</span></p>
+          <button data-id="5" onclick="añadirAlCar('mensajeConfirmacionMain8')" class="agregar-carrito mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
           <p id="mensajeConfirmacionMain8" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
         </div>
+        </div>
+
+        <div class="info-card">
         <div class=" w-60 h-60 flex flex-col items-center justify-center mt-8">
           <img class="w-40 h-38 border-4 border-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:" src="./accents/EsmalteEcologico.jpeg" alt="Esmalte">
           <div class="flex items-center">
             <i class="fa-solid fa-tags pr-2"></i>
             <p class="font-medium">Esmalte</p>
           </div>
-          <p class="font-medium">$5.950</p>
-          <button onclick="añadirAlCarrito('mensajeConfirmacionMain21')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
+          <p class="font-medium"><span>$5.950</span></p>
+          <button data-id="6" onclick="añadirAlCar('mensajeConfirmacionMain21')" class="agregar-carrito mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
           <p id="mensajeConfirmacionMain21" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
-          
         </div>
+        </div>
+
+        <div class="info-card">
         <div class=" w-60 h-60 flex flex-col items-center justify-center mt-8">
-          <img class="w-40 h-38 border-4 border-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:" src="./accents/Champú.jpeg" alt="Champú">
+          <img class="w-40 h-38 border-4 border-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:" src="./accents/Champú.jpeg" alt="Shampoo">
           <div class="flex items-center">
             <i class="fa-solid fa-tags pr-2"></i>
-            <p class="font-medium">Shampú </p>
+            <p class="font-medium">Shampoo </p>
           </div>
-          <p class="font-medium">$12.900</p>
-          <button onclick="añadirAlCarrito('mensajeConfirmacionMain27')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
+          <p class="font-medium"><span>$12.900</span></p>
+          <button data-id="7" onclick="añadirAlCar('mensajeConfirmacionMain27')" class="agregar-carrito mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
           <p id="mensajeConfirmacionMain27" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
         </div>
+        </div>
+
+        <div class="info-card">
         <div class=" w-60 h-60 flex flex-col items-center justify-center mt-8">
           <img class="w-40 h-38 border-4 border-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:" src="./accents/CortinasDeAlgodon.jpeg" alt="Cortina de algodón">
           <div class="flex items-center">
             <i class="fa-solid fa-tags pr-2"></i>
             <p class="font-medium">Cortinas de algodón</p>
           </div>
-          <p class="font-medium">$17.950</p>
-          <button onclick="añadirAlCarrito('mensajeConfirmacionMain10')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
+          <p class="font-medium"><span>$17.950</span></p>
+          <button data-id="8" onclick="añadirAlCar('mensajeConfirmacionMain10')" class="agregar-carrito mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
           <p id="mensajeConfirmacionMain10" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
+        </div>
+        </div>
         </div>
         <!--Seccion de productos Sebastian Castaño-->
         <!--Agregar una seccion de 8 productos, con sus respectivas imagenes, nombres y precios-->
-      </div>
       <div class="grid gap-0 grid-cols-2 grid-rows-1 w-11/12 2/6 m-auto pl-32">
         <div class="w-4/6 h-full rounded-md shadow-lg">
           <img class="rounded-md h-full" src="./accents/banerVerticalProductos.jpg" alt="Productos naturales">
@@ -315,339 +370,433 @@
   </section>
   <!--Secciones categorias: Aseo personal, Bienestar y belleza, Hogar, Mascotas hechas por Paola Murillo-->
   <div id="aseoPersonal" class="w-11/12 grid gap-20 gap-x-20 grid-cols-4 grid-rows-2 my-20 p-20 m-auto ">
+
+    <div class="info-card">
     <div class=" w-60 h-60 flex flex-col items-center justify-center">
       <img class="w-40 h-38 border-4 border-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:" src="./accents/jabonBañoDeOliva.jpeg" alt="Jabón de oliva">
       <div class="flex items-center">
         <i class="fa-solid fa-tags pr-2"></i>
         <p class="font-medium">Jabón con aceite de oliva</p>
       </div>
-      <p class="font-medium">$4.950</p>
-      <button onclick="añadirAlCarrito('mensajeConfirmacion1')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
+      <p class="font-medium"><span>$4.950</span></p>
+      <button data-id="9" onclick="añadirAlCar('mensajeConfirmacion1')" class="agregar-carrito mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
       <p id="mensajeConfirmacion1" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
     </div>
+    </div>
+
+    <div class="info-card">
     <div class=" w-60 h-60 flex flex-col items-center justify-center">
       <img class="w-40 h-38 border-4 border-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:" src="./accents/desodoranteLibreAluminio.jpeg" alt="desorante libre de aluminio">
       <div class="flex items-center">
         <i class="fa-solid fa-tags pr-2"></i>
         <p class="font-medium">Desodorante </p>
       </div>
-      <p class="font-medium">$6.950</p>
-      <button onclick="añadirAlCarrito('mensajeConfirmacion2')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
+      <p class="font-medium"><span>$6.950</span></p>
+      <button data-id="10" onclick="añadirAlCar('mensajeConfirmacion2')" class="agregar-carrito mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
       <p id="mensajeConfirmacion2" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
     </div>
+    </div>
+
+    <div class="info-card">
     <div class=" w-60 h-60 flex flex-col items-center justify-center">
       <img class="w-40 h-38 border-4 border-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:" src="./accents/esponjaBañoNatural.jpeg" alt="imagen caja producto">
       <div class="flex items-center">
         <i class="fa-solid fa-tags pr-2"></i>
         <p class="font-medium">Esponja de baño </p>
       </div>
-      <p class="font-medium">$4.500</p>
-      <button onclick="añadirAlCarrito('mensajeConfirmacion3')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
+      <p class="font-medium"><span>$4.500</span></p>
+      <button data-id="11" onclick="añadirAlCar('mensajeConfirmacion3')" class="agregar-carrito mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
       <p id="mensajeConfirmacion3" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
     </div>
+    </div>
+
+    <div class="info-card"> 
     <div class=" w-60 h-60 flex flex-col items-center justify-center">
       <img class="w-40 h-38 border-4 border-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:" src="./accents/rasuradoraAceroInoxidable.jpeg" alt="Rasuradora de acer inoxidable">
       <div class="flex items-center">
         <i class="fa-solid fa-tags pr-2"></i>
         <p class="font-medium">Rasuradora inoxidable</p>
       </div>
-      <p class="font-medium">11.950</p>
-      <button onclick="añadirAlCarrito('mensajeConfirmacion4')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
+      <p class="font-medium"><span>11.950</span></p>
+      <button data-id="12" onclick="añadirAlCar('mensajeConfirmacion4')" class="agregar-carrito mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
       <p id="mensajeConfirmacion4" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
     </div>
+    </div>
+
+    <div class="info-card">
     <div class=" w-60 h-60 flex flex-col items-center justify-center mt-8">
-      <img class="w-40 h-38 border-4 border-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:" src="./accents/champuDeCafe.jpeg" alt="champu de café natural">
+      <img class="w-40 h-38 border-4 border-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:" src="./accents/champuDeCafe.jpeg" alt="Shampoo de café natural">
       <div class="flex items-center">
         <i class="fa-solid fa-tags pr-2"></i>
-        <p class="font-medium">Shampu de café</p>
+        <p class="font-medium">Shampoo de café</p>
       </div>
-      <p class="font-medium">$19.999</p>
-      <button onclick="añadirAlCarrito('mensajeConfirmacion5')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
+      <p class="font-medium"><span>$19.999</span></p>
+      <button data-id="2" onclick="añadirAlCar('mensajeConfirmacion5')" class="agregar-carrito mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
       <p id="mensajeConfirmacion5" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
-      
     </div>
+    </div>
+
+    <div class="info-card">
     <div class=" w-60 h-60 flex flex-col items-center justify-center mt-8">
       <img class="w-40 h-38 border-4 border-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:" src="./accents/cremaDientesDeMenta.jpeg" alt="Crema dental de menta">
       <div class="flex items-center">
         <i class="fa-solid fa-tags pr-2"></i>
         <p class="font-medium">Crema dental de menta</p>
       </div>
-      <p class="font-medium">$7.850</p>
-      <button onclick="añadirAlCarrito('mensajeConfirmacion6')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
+      <p class="font-medium"><span>$7.850</span></p>
+      <button data-id="13" onclick="añadirAlCar('mensajeConfirmacion6')" class="agregar-carrito mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
       <p id="mensajeConfirmacion6" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
     </div>
+    </div>
+
+    <div class="info-card">
     <div class=" w-60 h-60 flex flex-col items-center justify-center mt-8">
       <img class="w-40 h-38 border-4 border-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:" src="./accents/aceiteDeCocoCabello.jpeg" alt="Aceite natural de coco">
       <div class="flex items-center">
         <i class="fa-solid fa-tags pr-2"></i>
         <p class="font-medium">Aceite natural de coco</p>
       </div>
-      <p class="font-medium">$13.000</p>
-      <button onclick="añadirAlCarrito('mensajeConfirmacion7')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
+      <p class="font-medium"><span>$13.000</span></p>
+      <button data-id="14" onclick="añadirAlCar('mensajeConfirmacion7')" class="agregar-carrito mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
       <p id="mensajeConfirmacion7" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
     </div>
+    </div>
+
+    <div class="info-card">
      <div class=" w-60 h-60 flex flex-col items-center justify-center mt-8">
           <img class="w-40 h-38 border-4 border-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:" src="./accents/hiloDentalDeSeda.jpeg" alt="Hilo dental de seda">
           <div class="flex items-center">
             <i class="fa-solid fa-tags pr-2"></i>
             <p class="font-medium">Hilo dental de seda</p>
           </div>
-          <p class="font-medium">$5.950</p>
-          <button onclick="añadirAlCarrito('mensajeConfirmacion8')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
+          <p class="font-medium"><span>$5.950</span></p>
+          <button data-id="5" onclick="añadirAlCar('mensajeConfirmacion8')" class="agregar-carrito mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
           <p id="mensajeConfirmacion8" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
+        </div>
         </div>
   </div>
   <!--Seccion Bienestar y belleza-->
   <div id="bienestarYBelleza" class="w-11/12 grid gap-20 gap-x-20 grid-cols-4 grid-rows-2 my-20 p-20 m-auto ">
+
+    <div class="info-card">
     <div class=" w-60 h-60 flex flex-col items-center justify-center">
       <img class="w-40 h-38 border-4 border-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:" src="./accents/BaseLiquidaNatural.jpeg" alt="Base liquida natural">
       <div class="flex items-center">
         <i class="fa-solid fa-tags pr-2"></i>
         <p class="font-medium">Base liquida</p>
       </div>
-      <p class="font-medium">$16,950</p>
-      <button onclick="añadirAlCarrito('mensajeConfirmacion17')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
+      <p class="font-medium"><span>$16,950</span></p>
+      <button data-id="15" onclick="añadirAlCar('mensajeConfirmacion17')" class="agregar-carrito mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
       <p id="mensajeConfirmacion17" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
     </div>
+    </div>
+
+    <div class="info-card">
     <div class=" w-60 h-60 flex flex-col items-center justify-center">
       <img class="w-40 h-38 border-4 border-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:" src="./accents/CapsulasDeAlgarrobo.jpeg" alt="Capsulas de algarrobo">
       <div class="flex items-center">
         <i class="fa-solid fa-tags pr-2"></i>
         <p class="font-medium">Capsulas de algarrobo </p>
       </div>
-      <p class="font-medium">$12.950</p>
-      <button onclick="añadirAlCarrito('mensajeConfirmacion18')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
+      <p class="font-medium"><span>$12.950</span></p>
+      <button data-id="16" onclick="añadirAlCar('mensajeConfirmacion18')" class="agregar-carrito mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
       <p id="mensajeConfirmacion18" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
     </div>
+    </div>
+
+    <div class="info-card"> 
     <div class=" w-60 h-60 flex flex-col items-center justify-center">
       <img class="w-40 h-38 border-4 border-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:" src="./accents/Bloquiador.jpeg" alt="Bloquiador">
       <div class="flex items-center">
         <i class="fa-solid fa-tags pr-2"></i>
         <p class="font-medium">Bloqueador  </p>
       </div>
-      <p class="font-medium">$21.000</p>
-      <button onclick="añadirAlCarrito('mensajeConfirmacion19')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
+      <p class="font-medium"><span>$21.000</span></p>
+      <button data-id="4" onclick="añadirAlCar('mensajeConfirmacion19')" class="agregar-carrito mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
       <p id="mensajeConfirmacion19" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
     </div>
+    </div>
+
+    <div class="info-card"> 
     <div class=" w-60 h-60 flex flex-col items-center justify-center">
       <img class="w-40 h-38 border-4 border-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:" src="./accents/GelDuchaDeAguacate.jpeg" alt="Gel de ducha">
       <div class="flex items-center">
         <i class="fa-solid fa-tags pr-2"></i>
         <p class="font-medium">Gel ducha de aguacate</p>
       </div>
-      <p class="font-medium">11.950</p>
-      <button onclick="añadirAlCarrito('mensajeConfirmacion20')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
+      <p class="font-medium"><span>11.950</span></p>
+      <button data-id="17" onclick="añadirAlCar('mensajeConfirmacion20')" class="agregar-carrito mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
       <p id="mensajeConfirmacion20" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
     </div>
+    </div>
+
+    <div class="info-card"> 
     <div class=" w-60 h-60 flex flex-col items-center justify-center mt-8">
       <img class="w-40 h-38 border-4 border-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:" src="./accents/EsmalteEcologico.jpeg" alt="Esmalte">
       <div class="flex items-center">
         <i class="fa-solid fa-tags pr-2"></i>
         <p class="font-medium">Esmalte</p>
       </div>
-      <p class="font-medium">$5.950</p>
-      <button onclick="añadirAlCarrito('mensajeConfirmacion21')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
+      <p class="font-medium"><span>$5.950</span></p>
+      <button data-id="6" onclick="añadirAlCar('mensajeConfirmacion21')" class="agregar-carrito mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
       <p id="mensajeConfirmacion21" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
-      
     </div>
+    </div>
+      
+    <div class="info-card"> 
     <div class=" w-60 h-60 flex flex-col items-center justify-center mt-8">
       <img class="w-40 h-38 border-4 border-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:" src="./accents/BrochaMangoDeBambú.jpeg" alt="Brocha mango de bambú">
       <div class="flex items-center">
         <i class="fa-solid fa-tags pr-2"></i>
         <p class="font-medium">Brocha mango de bambú</p>
       </div>
-      <p class="font-medium">$8.000</p>
-      <button onclick="añadirAlCarrito('mensajeConfirmacion22')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
+      <p class="font-medium"><span>$8.000</span></p>
+      <button data-id="18" onclick="añadirAlCar('mensajeConfirmacion22')" class="agregar-carrito mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
       <p id="mensajeConfirmacion22" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
     </div>
+    </div>
+
+    <div class="info-card"> 
     <div class=" w-60 h-60 flex flex-col items-center justify-center mt-8">
       <img class="w-40 h-38 border-4 border-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:" src="./accents/MascarillaArcillaRosaOrganica.jpeg" alt="Mascarilla de arcilla">
       <div class="flex items-center">
         <i class="fa-solid fa-tags pr-2"></i>
         <p class="font-medium">Mascarilla de arcilla</p>
       </div>
-      <p class="font-medium">$15.000</p>
-      <button onclick="añadirAlCarrito('mensajeConfirmacion23')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
+      <p class="font-medium"><span>$15.000</span></p>
+      <button data-id="19" onclick="añadirAlCar('mensajeConfirmacion23')" class="agregar-carrito mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
       <p id="mensajeConfirmacion23" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
     </div>
+    </div>
+
+    <div class="info-card"> 
     <div class=" w-60 h-60 flex flex-col items-center justify-center mt-8">
       <img class="w-40 h-38 border-4 border-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:" src="./accents/SerumsHidratante.jpeg" alt="Sérums hidratante">
       <div class="flex items-center">
         <i class="fa-solid fa-tags pr-2"></i>
         <p class="font-medium">Sérums hidratante</p>
       </div>
-      <p class="font-medium">$12.950</p>
-      <button onclick="añadirAlCarrito('mensajeConfirmacion24')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
+      <p class="font-medium"><span>$12.950</span></p>
+      <button data-id="20" onclick="añadirAlCar('mensajeConfirmacion24')" class="agregar-carrito mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
       <p id="mensajeConfirmacion24" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
     </div>
   </div>
+  </div>
   <!--Seccion hogar-->
   <div id="hogar" class="w-11/12 grid gap-20 gap-x-20 grid-cols-4 grid-rows-2 my-20 p-20 m-auto ">
+    
+    <div class="info-card">
     <div class=" w-60 h-60 flex flex-col items-center justify-center">
       <img class="w-40 h-38 border-4 border-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:" src="./accents/DeterjenteEnPolvo.jpeg" alt="Detergente en polvo">
       <div class="flex items-center">
         <i class="fa-solid fa-tags pr-2"></i>
         <p class="font-medium">Detergente en polvo</p>
       </div>
-      <p class="font-medium">$11.999</p>
-      <button onclick="añadirAlCarrito('mensajeConfirmacion9')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
+      <p class="font-medium"><span>$11.999</span></p>
+      <button data-id="21" onclick="añadirAlCar('mensajeConfirmacion9')" class="agregar-carrito mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
       <p id="mensajeConfirmacion9" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
     </div>
+    </div>
+
+    <div class="info-card">
     <div class=" w-60 h-60 flex flex-col items-center justify-center">
       <img class="w-40 h-38 border-4 border-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:" src="./accents/CortinasDeAlgodon.jpeg" alt="Cortina de algodón">
       <div class="flex items-center">
         <i class="fa-solid fa-tags pr-2"></i>
         <p class="font-medium">Cortinas de algodón</p>
       </div>
-      <p class="font-medium">$17.950</p>
-      <button onclick="añadirAlCarrito('mensajeConfirmacion10')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
+      <p class="font-medium"><span>$17.950</span></p>
+      <button data-id="8" onclick="añadirAlCar('mensajeConfirmacion10')" class="agregar-carrito mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
       <p id="mensajeConfirmacion10" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
     </div>
+    </div>
+
+    <div class="info-card">
     <div class=" w-60 h-60 flex flex-col items-center justify-center">
       <img class="w-40 h-38 border-4 border-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:" src="./accents/CestoFibrasNaturales.jpeg" alt="Cesto de fibra natural">
       <div class="flex items-center">
         <i class="fa-solid fa-tags pr-2"></i>
         <p class="font-medium">Cesto de fibra </p>
       </div>
-      <p class="font-medium">$15.000</p>
-      <button onclick="añadirAlCarrito('mensajeConfirmacion11')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
+      <p class="font-medium"><span>$15.000</span></p>
+      <button data-id="3" onclick="añadirAlCar('mensajeConfirmacion11')" class="agregar-carrito mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
       <p id="mensajeConfirmacion11" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
     </div>
+    </div>
+
+    <div class="info-card">
     <div class=" w-60 h-60 flex flex-col items-center justify-center">
       <img class="w-40 h-38 border-4 border-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:" src="./accents/BolsasBasuraCompostables.jpeg" alt="Bolsa de basura compostable">
       <div class="flex items-center">
         <i class="fa-solid fa-tags pr-2"></i>
         <p class="font-medium">Bolsa de basura compostable</p>
       </div>
-      <p class="font-medium">$5.999</p>
-      <button onclick="añadirAlCarrito('mensajeConfirmacion12')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
+      <p class="font-medium"><span>$5.999</span></p>
+      <button data-id="22" onclick="añadirAlCar('mensajeConfirmacion12')" class="agregar-carrito mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
       <p id="mensajeConfirmacion12" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
     </div>
+    </div>
+
+    <div class="info-card">
     <div class=" w-60 h-60 flex flex-col items-center justify-center mt-8">
       <img class="w-40 h-38 border-4 border-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:" src="./accents/VajillaDePorcelana.jpeg" alt="Vajilla de porcelana">
       <div class="flex items-center">
         <i class="fa-solid fa-tags pr-2"></i>
         <p class="font-medium">Vajilla de porcelana</p>
       </div>
-      <p class="font-medium">$79.950</p>
-      <button onclick="añadirAlCarrito('mensajeConfirmacion13')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
+      <p class="font-medium"><span>$79.950</span></p>
+      <button data-id="23" onclick="añadirAlCar('mensajeConfirmacion13')" class="agregar-carrito mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
       <p id="mensajeConfirmacion13" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
     </div>
+    </div>
+
+    <div class="info-card">
     <div class=" w-60 h-60 flex flex-col items-center justify-center mt-8">
       <img class="w-40 h-38 border-4 border-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:" src="./accents/toallasMicrofibraReutilizables.jpeg" alt="Toallas de microfibra reutilizables">
       <div class="flex items-center">
         <i class="fa-solid fa-tags pr-2"></i>
         <p class="font-medium">Toallas de microfibra</p>
       </div>
-      <p class="font-medium">$5.999</p>
-      <button onclick="añadirAlCarrito('mensajeConfirmacion14')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
+      <p class="font-medium"><span>$5.999</span></p>
+      <button data-id="24" onclick="añadirAlCar('mensajeConfirmacion14')" class="agregar-carrito mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
       <p id="mensajeConfirmacion14" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
     </div>
+    </div>
+
+    <div class="info-card">
     <div class=" w-60 h-60 flex flex-col items-center justify-center mt-8">
       <img class="w-40 h-38 border-4 border-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:" src="./accents/SuavizanteNatural.jpeg" alt="Suavizante natural de ropas">
       <div class="flex items-center">
         <i class="fa-solid fa-tags pr-2"></i>
         <p class="font-medium">Suavizante natural</p>
       </div>
-      <p class="font-medium">$8.000</p>
-      <button onclick="añadirAlCarrito('mensajeConfirmacion15')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
+      <p class="font-medium"><span>$8.000</span></p>
+      <button data-id="25" onclick="añadirAlCar('mensajeConfirmacion15')" class="agregar-carrito mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
       <p id="mensajeConfirmacion15" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
     </div>
+    </div>
+
+    <div class="info-card">
     <div class=" w-60 h-60 flex flex-col items-center justify-center mt-8">
       <img class="w-40 h-38 border-4 border-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:" src="./accents/SabanasDeAlgodonOrganico.jpeg" alt="Sabanas de algodón">
       <div class="flex items-center">
         <i class="fa-solid fa-tags pr-2"></i>
-        <p class="font-medium">Sabanas de algodón/p>
+        <p class="font-medium">Sabanas de algodón</p>
       </div>
-      <p class="font-medium">$29.950</p>
-      <button onclick="añadirAlCarrito('mensajeConfirmacion16')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
+      <p class="font-medium"><span>$29.950</span></p>
+      <button data-id="26" onclick="añadirAlCar('mensajeConfirmacion16')" class="agregar-carrito mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
       <p id="mensajeConfirmacion16" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
     </div>
   </div>
+  </div>
   <!--Seccion mascotas-->
   <div id="mascotas" class="w-11/12 grid gap-20 gap-x-20 grid-cols-4 grid-rows-2 my-20 p-20 m-auto ">
+
+    <div class="info-card">
     <div class=" w-60 h-60 flex flex-col items-center justify-center">
       <img class="w-40 h-38 border-4 border-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:" src="./accents/ArenaDeBambú.jpeg" alt="Arena de bambú">
       <div class="flex items-center">
         <i class="fa-solid fa-tags pr-2"></i>
         <p class="font-medium">Arena de bambú</p>
       </div>
-      <p class="font-medium">$25.000</p>
-      <button onclick="añadirAlCarrito('mensajeConfirmacion25')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
+      <p class="font-medium"><span>$25.000</span></p>
+      <button data-id="27" onclick="añadirAlCar('mensajeConfirmacion25')" class="agregar-carrito mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
       <p id="mensajeConfirmacion25" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
     </div>
+    </div>
+
+    <div class="info-card">
     <div class=" w-60 h-60 flex flex-col items-center justify-center">
       <img class="w-40 h-38 border-4 border-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:" src="./accents/CamaOrganica.jpeg" alt="Cama">
       <div class="flex items-center">
         <i class="fa-solid fa-tags pr-2"></i>
         <p class="font-medium">Cama  </p>
       </div>
-      <p class="font-medium">18.000</p>
-      <button onclick="añadirAlCarrito('mensajeConfirmacion26')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
+      <p class="font-medium"><span>18.000</span></p>
+      <button data-id="28" onclick="añadirAlCar('mensajeConfirmacion26')" class="agregar-carrito mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
       <p id="mensajeConfirmacion26" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
     </div>
+    </div>
+   
+    <div class="info-card">
     <div class=" w-60 h-60 flex flex-col items-center justify-center">
-      <img class="w-40 h-38 border-4 border-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:" src="./accents/Champú.jpeg" alt="Champú">
+      <img class="w-40 h-38 border-4 border-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:" src="./accents/Champú.jpeg" alt="Shampoo">
       <div class="flex items-center">
         <i class="fa-solid fa-tags pr-2"></i>
-        <p class="font-medium">Shampú </p>
+        <p class="font-medium">Shampoo </p>
       </div>
-      <p class="font-medium">$12.900</p>
-      <button onclick="añadirAlCarrito('mensajeConfirmacion27')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
+      <p class="font-medium"><span>$12.900</span></p>
+      <button data-id="7" onclick="añadirAlCar('mensajeConfirmacion27')" class="agregar-carrito mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
       <p id="mensajeConfirmacion27" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
     </div>
+    </div>
+
+    <div class="info-card">
     <div class=" w-60 h-60 flex flex-col items-center justify-center">
       <img class="w-40 h-38 border-4 border-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:" src="./accents/CollarDeAlgodón (2).jpeg" alt="Collar de algodón">
       <div class="flex items-center">
         <i class="fa-solid fa-tags pr-2"></i>
         <p class="font-medium">Collar de algodón</p>
       </div>
-      <p class="font-medium">12.000</p>
-      <button onclick="añadirAlCarrito('mensajeConfirmacion28')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
+      <p class="font-medium"><span>12.000</span></p>
+      <button data-id="29" onclick="añadirAlCar('mensajeConfirmacion28')" class="agregar-carrito mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
       <p id="mensajeConfirmacion28" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
     </div>
+    </div>
+
+    <div class="info-card">
     <div class=" w-60 h-60 flex flex-col items-center justify-center mt-8">
       <img class="w-40 h-38 border-4 border-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:" src="./accents/JugueteCuerdaNatural.jpeg" alt="Juguete Cuerda Natural">
       <div class="flex items-center">
         <i class="fa-solid fa-tags pr-2"></i>
         <p class="font-medium">Juguete cuerda natural</p>
       </div>
-      <p class="font-medium">$6.000</p>
-      <button onclick="añadirAlCarrito('mensajeConfirmacion29')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
+      <p class="font-medium"><span>$6.000</span></p>
+      <button data-id="30" onclick="añadirAlCar('mensajeConfirmacion29')" class="agregar-carrito mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
       <p id="mensajeConfirmacion29" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
-      
     </div>
+    </div>
+
+    <div class="info-card">
     <div class=" w-60 h-60 flex flex-col items-center justify-center mt-8">
       <img class="w-40 h-38 border-4 border-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:" src="./accents/PañitosBiodegradables.jpeg" alt="Pañitos Biodegradables">
       <div class="flex items-center">
         <i class="fa-solid fa-tags pr-2"></i>
         <p class="font-medium">Pañitos biodegradables</p>
       </div>
-      <p class="font-medium">$9.950</p>
-      <button onclick="añadirAlCarrito('mensajeConfirmacion30')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
+      <p class="font-medium"><span>$9.950</span></p>
+      <button data-id="31" onclick="añadirAlCar('mensajeConfirmacion30')" class="agregar-carrito mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
       <p id="mensajeConfirmacion30" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
     </div>
+    </div>
+
+    <div class="info-card">
     <div class=" w-60 h-60 flex flex-col items-center justify-center mt-8">
       <img class="w-40 h-38 border-4 border-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:" src="./accents/PastaDientesNatural.jpeg" alt="Pasta de Dientes Natural">
       <div class="flex items-center">
         <i class="fa-solid fa-tags pr-2"></i>
-        <p class="font-medium">Pasta de dintes </p>
+        <p class="font-medium">Pasta de dientes </p>
       </div>
-      <p class="font-medium">$7.000</p>
-      <button onclick="añadirAlCarrito('mensajeConfirmacion31')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
+      <p class="font-medium"><span>$7.000</span></p>
+      <button data-id="32" onclick="añadirAlCar('mensajeConfirmacion31')" class="agregar-carrito mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
       <p id="mensajeConfirmacion31" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
     </div>
+    </div>
+
+    <div class="info-card">
     <div class=" w-60 h-60 flex flex-col items-center justify-center mt-8">
-      <img class="w-40 h-38 border-4 border-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:" src="./accents/SnacksOrgánicos.jpeg" alt="Snaks organicos">
+      <img class="w-40 h-38 border-4 border-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:" src="./accents/SnacksOrgánicos.jpeg" alt="Snacks organicos">
       <div class="flex items-center">
         <i class="fa-solid fa-tags pr-2"></i>
-        <p class="font-medium">Snaks organicos</p>
+        <p class="font-medium">Snacks organicos</p>
       </div>
-      <p class="font-medium">$6.950</p>
-      <button onclick="añadirAlCarrito('mensajeConfirmacion32')" class="mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
+      <p class="font-medium"><span>$6.950</span></p>
+      <button data-id="1" onclick="añadirAlCar('mensajeConfirmacion32')" class="agregar-carrito mt-4 bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600	 transition duration-200">Añadir al carrito</button>
       <p id="mensajeConfirmacion32" class="mt-2 text-green-600 font-semibold hidden">¡Añadido al carrito!</p>
     </div>
   </div>
+  </div>
+
     <footer id="footer-principal" class="w-11/12 m-auto">
         <div class="flex h-60 justify-around items-center text-xl border-4 border-b-4 mt-20 rounded-md shadow-lg mb-10 bg-gradient-to-b from-cyan-400 to-cyan-100">
           <a href="#"><p>Encuentra lo que buscas</p></a>
@@ -675,5 +824,6 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script type="module" src="script.js"></script>
     <script src="./carrito.js"></script>
+    <script src="./car.js"></script>
   </body>
 </html>

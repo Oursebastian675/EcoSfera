@@ -1,0 +1,139 @@
+/* Tamaño para que no se desorganice el texto de "vaciar carrito" al poner el cursor sobre el */
+h1 {
+  font-size: 5.0rem;
+}
+
+h2 {
+  font-size: 4.2rem;
+}
+
+h3 {
+  font-size: 3.6rem;
+}
+
+h4 {
+  font-size: 3.0rem;
+}
+
+h5 {
+  font-size: 2.4rem;
+}
+
+h6 {
+  font-size: 1.5rem;
+}
+
+/* Espaciado del boton "vaciar carrito" */
+table {
+  margin-bottom: 2.5rem;
+}
+
+.Vaciar {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.Lado {
+  float: right;
+}
+
+
+
+/* Color y estilo de la X que hay en el carrito*/
+.borrar-producto {
+  background-color: red;
+  border-radius: 50%;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #0FA0CE;
+}
+
+/* Estilo del boton vaciar carrito */
+.button {
+  display: inline-block;
+  height: 38px;
+  padding: 0 30px;
+  color: #555;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 38px;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+/* Color del boton "Vaciar carrito" */
+.button:hover,
+.button.button-primary:focus,
+button.button-primary:focus,
+input[type="submit"].button-primary:focus,
+input[type="reset"].button-primary:focus,
+input[type="button"].button-primary:focus {
+  color: #FFF;
+  background-color: #1EAEDB;
+  border-color: #1EAEDB;
+}
+
+/* Division en tablas para mayor orden en el carrito */
+th,
+td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #E1E1E1;
+}
+
+th:first-child,
+td:first-child {
+  padding-left: 0;
+}
+
+th:last-child,
+td:last-child {
+  padding-right: 0;
+}
+
+
+/* Ocultar y aparecer menu donde se agregan los objetos al carrito */
+ul {
+  list-style: none;
+}
+
+
+.submenu {
+  position: relative;
+}
+
+.submenu #carrito {
+  display: none;
+}
+
+.submenu:hover #carrito {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  z-index: 1;
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  min-height: 400px;
+  min-width: 300px;
+}
+
+.img-carrito{
+  height: 25px;
+  width: 35px;
+  padding: 2.5px;
+  margin: 10px;
+}
